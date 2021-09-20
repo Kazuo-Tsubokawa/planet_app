@@ -15,7 +15,7 @@ class PlanetController extends Controller
     public function index()
     {
         $planets = Planet::all();
-        return view('planets.index',['planets' => $planets]);
+        return view('planets.index', ['planets' => $planets]);
     }
 
     /**
@@ -42,7 +42,6 @@ class PlanetController extends Controller
         $planet->name_english = $request->name_english;
         $planet->radius = $request->radius;
         $planet->weight = $request->weight;
-        $planet->timestamps = false;
 
         $planet->save();
 
@@ -58,7 +57,7 @@ class PlanetController extends Controller
     public function show($id)
     {
         $planet = Planet::find($id);
-        return view('planets.show',['planet' => $planet]);
+        return view('planets.show', ['planet' => $planet]);
     }
 
     /**
@@ -70,7 +69,7 @@ class PlanetController extends Controller
     public function edit($id)
     {
         $planet = Planet::find($id);
-        return view('planets.edit',['planet' => $planet]);
+        return view('planets.edit', ['planet' => $planet]);
     }
 
     /**
@@ -88,7 +87,6 @@ class PlanetController extends Controller
         $planet->name_english = $request->name_english;
         $planet->radius = $request->radius;
         $planet->weight = $request->weight;
-        $planet->timestamps = false;
 
         $planet->save();
 
