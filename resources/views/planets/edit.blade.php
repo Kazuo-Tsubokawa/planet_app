@@ -40,7 +40,7 @@
         </p>
         <p>
             <label for="weight">重量</label>
-            <input type="text" name="weight" id="" value="{{ $planet->weight }}">
+            <input type="number" name="weight" id="" value="{{ $planet->weight }}">
         </p>
 
         <input type="submit" value="更新">
